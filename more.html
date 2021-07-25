@@ -198,7 +198,7 @@
         <p id="Membership"><a href="#PageContents">Page Contents</a></p>
         <h2>Membership of FPSA</h2>
         
-        <p>BECOMING AN ORDINARY MEMBER OF FPSA AND PAYING A MEMBERSHIP FEE<br>
+        <p>BECOMING AN ORDINARY MEMBER OF FPSA FOR LIFE AND PAYING A MEMBERSHIP FEE<br>
 FPSA must find a way to raise funds from members paying a joining fee.
 Currently the joining fee for life membership of ordinary members is R50. Such members will get a Federal Party SA - FPSA card,
 stating "LIFE MEMBERSHIP", with their name and photo and membership number. 
@@ -225,6 +225,33 @@ Account Type: Current Account<br>
 Passport photo dimensions: "Your head must span 1 - 1 ⅜ inches (25-35mm) measuring from the bottom of your chin to
 the top of your head. A digital version of your passport photo, has to be in a square
 aspect ratio with a minimum dimension size of 600 x 600 pixels and a maximum dimension of 1200 x 1200 pixels."</p>
+        
+        <p>ORDINARY YEARLY MEMBERSHIP</p>
+        
+        <p>Africahead administers FPSA memberships. A yearly recurring membership can be purchased with 2 USD.</p>
+        
+        <p><div id="paypal-button-container-P-4PU97528TR6918512MD6TEMI"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AdBkTDUoN1WHP9P6llj9YAvxX8RbeOoJfoTFjjGXbPCAM4KDokF3hmgJ7LMM0wI1C5nNjZsy-YpNscRe&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script> 
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-4PU97528TR6918512MD6TEMI'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-4PU97528TR6918512MD6TEMI'); // Renders the PayPal button
+</script>
+        </p>
         
         <p>It is also possible to join as ordinary member without getting a card by adding your
         <a href="https://www.africahead.co.za/admidio/" target="_blank">details</a> to
