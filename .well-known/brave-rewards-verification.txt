@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: federalpartysa.github.io
+Token: b03e6bac303b788cedda592e938cf6f0f038e6132a125aec949a403cf221044d
