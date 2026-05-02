@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Federal Party SA (FPSA) – More Information</title>
+
+  <!-- Social sharing -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:title" content="Federal Party SA (FPSA), with different Houses.">
+  <meta property="og:description" content="The political self-determination (SD) party for all South Africans. In FPSA, each House's members agree on and promote their own and others' self-determination.">
+  <meta property="og:image" content="https://federalpartysa.github.io/indexfiles/ShareCode.jpg">
+  <meta property="og:url" content="https://federalpartysa.github.io">
+
+  <style>
+    /* ── Design tokens ─────────────────────────────────────── */
+    :root {
+      --green:   #1a6b3c;
+      --gold:    #b8860b;
+      --dark:    #111;
+      --mid:     #333;
+      --light:   #f5f2ec;
+      --white:   #ffffff;
+      --border:  #c8c0ae;
+      --radius:  6px;
+      --max:     860px;
+      --step-bg: #e8f4ee;
+    }
+
+    /* ── Reset & base ──────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      font-size: 20px;          /* large base – comfortable for all ages */
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.75;
+    }
+
+    /* ── Skip link ─────────────────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 4px;
+      background: var(--green);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      z-index: 999;
+    }
+    .skip-link:focus { left: 8px; }
+
+    /* ── Layout wrapper ────────────────────────────────────── */
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* ── Header / nav ──────────────────────────────────────── */
+    header {
+      background: var(--green);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+    header nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      list-style: none;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    header nav ul li a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      padding: 0.75rem 1rem;
+      transition: background 0.2s;
+    }
+
+    header nav ul li a:hover,
+    header nav ul li a:focus {
+      background: rgba(255,255,255,0.18);
+      outline: none;
+    }
+
+    /* ── Hero banner ───────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, var(--green) 0%, #0e4526 100%);
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1.25rem 2.5rem;
+    }
+
+    .hero img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 4px solid rgba(255,255,255,0.6);
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .tagline {
+      font-size: 1.1rem;
+      font-style: italic;
+      opacity: 0.9;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-links a {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.5);
+      border-radius: var(--radius);
+      padding: 0.4rem 1rem;
+      margin: 0.25rem;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .hero-links a:hover { background: rgba(255,255,255,0.3); }
+
+    /* ── Main content ──────────────────────────────────────── */
+    main {
+      padding: 2.5rem 0 3rem;
+    }
+
+    /* ── Table of contents ─────────────────────────────────── */
+    .toc {
+      background: #fff;
+      border: 2px solid var(--border);
+      border-left: 6px solid var(--green);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .toc h2 {
+      font-size: 1.2rem;
+      color: var(--green);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.35rem 1.5rem;
+    }
+
+    .toc-grid a {
+      color: var(--green);
+      text-decoration: none;
+      font-size: 0.95rem;
+      border-bottom: 1px dotted var(--border);
+      padding-bottom: 0.2rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+    .toc-grid a:hover { color: var(--gold); border-color: var(--gold); }
+
+    .manifesto-link {
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .manifesto-link a {
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    /* ── Sections ──────────────────────────────────────────── */
+    .section {
+      margin-bottom: 2.75rem;
+      scroll-margin-top: 70px;
+    }
+
+    .back-link {
+      display: inline-block;
+      font-size: 0.8rem;
+      color: var(--green);
+      text-decoration: none;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+      opacity: 0.7;
+    }
+    .back-link:hover { opacity: 1; }
+
+    h2 {
+      font-size: 1.75rem;
+      color: var(--green);
+      border-bottom: 3px solid var(--gold);
+      padding-bottom: 0.35rem;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      color: var(--mid);
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    strong { color: var(--mid); }
+
+    /* ── Cards / info boxes ────────────────────────────────── */
+    .info-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--gold);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin: 1.25rem 0;
+    }
+
+    .highlight-box {
+      background: var(--step-bg);
+      border: 1px solid #a8d5b8;
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin: 1.25rem 0;
+      font-size: 1.05rem;
+    }
+
+    /* ── Numbered steps ────────────────────────────────────── */
+    .steps { margin: 1rem 0; }
+
+    .step {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      background: var(--green);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin-top: 0.1rem;
+    }
+
+    /* ── Images ────────────────────────────────────────────── */
+    .img-block {
+      margin: 1.25rem 0;
+      text-align: left;
+    }
+    .img-block img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      display: block;
+    }
+    .img-block figcaption {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 0.4rem;
+      font-style: italic;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    /* ── Candidates table ──────────────────────────────────── */
+    .candidates {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 1.25rem 0;
+    }
+
+    .candidate-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+      text-align: center;
+      flex: 1 1 220px;
+    }
+
+    .candidate-card img {
+      width: 160px;
+      height: 213px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      border: 2px solid var(--border);
+      display: block;
+      margin: 0 auto 0.75rem;
+    }
+
+    .candidate-card p {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    /* ── Donation / PayPal area ────────────────────────────── */
+    .funding-block {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin: 1.25rem 0;
+    }
+
+    .funding-block img { vertical-align: middle; margin-right: 0.5rem; }
+
+    /* ── Social media ──────────────────────────────────────── */
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1rem 0;
+    }
+
+    .social-links a {
+      display: inline-block;
+      background: var(--green);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 0.45rem 1.1rem;
+      font-size: 0.95rem;
+      text-decoration: none;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .social-links a:hover { background: var(--gold); }
+
+    /* ── Two-item join policy ──────────────────────────────── */
+    .two-policies {
+      background: var(--green);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem;
+      margin: 1.25rem 0;
+      font-size: 1.1rem;
+    }
+    .two-policies p { margin-bottom: 0.4rem; }
+    .two-policies strong { color: #ffe08a; }
+
+    /* ── Footer ────────────────────────────────────────────── */
+    footer {
+      background: var(--dark);
+      color: #ccc;
+      padding: 1.5rem 1.25rem;
+    }
+
+    footer nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 0;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    footer nav ul li a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 0.4rem 0.9rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      transition: color 0.2s;
+    }
+    footer nav ul li a:hover { color: #fff; }
+
+    /* ── Divider ───────────────────────────────────────────── */
+    hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* ── Responsive ────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      html { font-size: 18px; }
+      .hero h1 { font-size: 1.7rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ── Navigation ───────────────────────────────────────────── -->
+<header>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="DiP/Contact.html" target="_blank">Contact</a></li>
+      <li><a href="DiP/Fundraising.html" target="_blank">Funding</a></li>
+      <li><a href="DiP/Media.html" target="_blank">Media</a></li>
+      <li><a href="DiP/Municipalities.html" target="_blank">Municipalities</a></li>
+      <li><a href="DiP/Jobs.html" target="_blank">Jobs</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ── Hero ─────────────────────────────────────────────────── -->
+<div class="hero">
+  <img src="indexfiles/fpsaLogoSmall.png" alt="Federal Party of South Africa logo">
+  <h1>Federal Party SA (FPSA)</h1>
+  <p class="tagline">A political party uniting left and right, for the self-determination of all South Africans, against imperialism.</p>
+  <div class="hero-links">
+    <a href="indexfiles/fpsaLogoOriginal.png" target="_blank">Download logo (.png)</a>
+    <a href="indexfiles/fpsaLogoOriginal.svg" target="_blank">Download logo (.svg)</a>
+    <a href="indexfiles/FPSAmanifesto1October2021.pdf" target="_blank">Download 2021 Manifesto (PDF)</a>
+  </div>
+</div>
+
+<!-- ── Main ──────────────────────────────────────────────────── -->
+<main id="main-content">
+<div class="container">
+
+  <p style="margin-top:1.5rem;">FPSA was registered in 2019. Work is ongoing to enter local elections. Provincial and national elections are not being entered at present, due to a lack of funding.</p>
+
+  <!-- Table of contents -->
+  <div class="toc" id="PageContents">
+    <h2>Page Contents</h2>
+    <div class="toc-grid">
+      <a href="#Demand">Demand for FPSA</a>
+      <a href="#Funding">Funding of FPSA</a>
+      <a href="#Membership">Membership of FPSA</a>
+      <a href="#PoliticalTheory">Political Theory</a>
+      <a href="#Reasonstovote">Reasons to Vote for FPSA</a>
+      <a href="#Priorities">Priorities</a>
+      <a href="#Constitution">Constitution of FPSA and SA</a>
+      <a href="#ExecutiveBody">Executive Body (EB)</a>
+      <a href="#Leadership">Leadership of FPSA</a>
+      <a href="#Policy">Policy of FPSA</a>
+      <a href="#LandProposal">Proposal: Solving the Land Problem</a>
+      <a href="#LanguageMap">Language Map of South Africa</a>
+      <a href="#Houses">Houses of FPSA</a>
+      <a href="#Elections">Elections</a>
+      <a href="#Future">The Future</a>
+      <a href="#Projects">Projects</a>
+      <a href="#NotComm">Notices and Community</a>
+      <a href="#SocialMedia">Social Media</a>
+    </div>
+    <div class="manifesto-link">
+      <a href="indexfiles/FPSAmanifesto1October2021.pdf" target="_blank">📄 Download the 2021 Election Manifesto (PDF)</a>
+    </div>
+  </div>
+
+  <!-- ── Demand ─────────────────────────────────────────────── -->
+  <section class="section" id="Demand" aria-labelledby="h-demand">
+    <a class="back-link" href="#PageContents">↑ Page Contents</a>
+    <h2 id="h-demand">Demand for FPSA</h2>
+
+    <p>Politics has two primary poles: <strong>imperialism</strong> and <strong>self-determination</strong>. Imperialists do not respect others' self-determination; they prefer large central governments. Self-determiners respect others' self-determination and prefer small central governments. In simple terms, voters either support big central governance (imperialism) or small central governance (self-determination).</p>
+
+    <p>The imperialist mindset is dominated by the idea of "One". Those with this mindset do not respect differences. For example, they think there should be only one type of education, one economic system (whether communism, capitalism, or socialism). They do not respect cultural differences. By contrast, self-determination thinkers respect each other's right to choose different systems and approaches in different regions.</p>
+
+    <p>FPSA is the only party promoting the smallest possible central government with the highest possible degree of decentralisation, to give self-determination to all who want it. A small central government should focus only on the universal matters that most voters agree on — those are what keep a country united. The most important universal matters are discouraging crime and maintaining a Defence Force. Large central governments divide nations because they focus exclusively on either liberalism or conservatism.</p>
+
+    <p>Those on both the left and right who respect others' self-determination can be united in one party — a party that arranges self-determination for both the left and the right.</p>
+
+    <p>Leaders must understand the cultures they lead. No one person can be a leader for all cultures. Within the framework of the South African Constitution, FPSA's policy is to decentralise regional governance to the greatest degree possible.</p>
+
+    <p>A small central government should focus on universals that unite different cultures — primarily the principle of not doing harm to others (as you yourself would not want harm done to you). Every person who lives by this principle strengthens the South African nation. Decentralised regional governments should respect this universal principle and focus on doing good for their communities according to their own cultures, because what constitutes "doing good" cannot be uniform across all of the world's different peoples.</p>
+
+    <div class="info-box">
+      <p>The "left wing" and "right wing" metaphor means: if Liberals AND Conservatives do not both function, the metaphorical bird cannot fly. The left and right have different roles in society. During apartheid the left wing was suppressed. Currently the right wing is not functioning.</p>
+      <p>In the USA, the left has self-determination in Democratic (blue) states, and the right in Republican (red) states. In Switzerland, the left has self-determination in multilingual cantons, and the right in single-language cantons. Central governance that favours only one side creates imbalance. Decentralised governance allows money to be used locally, promoting development in rural as well as urban areas.</p>
+    </div>
+
+    <p>The left and right will remain divided for the foreseeable future, but they can exist within one united party. The mistake of apartheid was forced segregation — not self-determination itself.</p>
+
+    <p>FPSA's objective is to unite the left and right in one party while arranging self-determination for all in multicultural (left) and unicultural (right) regions, while allowing anyone to live anywhere, provided they respect the law.</p>
+
+    <p>Current right-wing parties represent primarily one minority group and cannot draw enough votes to overcome the imperialism of the majority parties. FPSA can draw more than 50% of the votes because it represents all groups in favour of self-determination. Corruption is out of control, and the current majority parties are unlikely to fix it. Dishonest groups currently control South Africa through criminal activity. The significant cultural differences in South Africa regarding how individuals relate to their groups is one of the most important reasons why more than one cultural system/region is necessary.</p>
+
+    <div class="highlight-box">
+      <strong>FPSA can draw more than 50% of the votes for the self-determination of all, because anyone from any group of any community — as well as multiculturalists — within the South African nation can vote for FPSA.</strong>
+    </div>
+  </section>
+
+  <!-- ── Funding ─────────────────────────────────────────────── -->
+  <section class="section" id="Funding" aria-labelledby="h-funding">
+    <a class="back-link" href="#PageContents">↑ Page Contents</a>
+    <h2 id="h-funding">Funding of FPSA</h2>
+
+    <p>Refer to the <a href="DiP/Fundraising.html" target="_blank">Fundraising Page</a> for funding options, including bank deposits into FPSA's bank account. FPSA needs fundraisers — see the <a href="DiP/Jobs.html" target="_blank">Jobs Page</a> for more information.</p>
+
+    <p>Tax-deductible <a href="https://dividedparty.github.io/DiP/DiPtokens.html" target="_blank">DiP brand tokens</a> can be purchased. DiP tokens represent the values of conciliation, mediation, and dispute resolution.</p>
+
+    <div class="funding-block">
+      <p>
+        <img src="DiP/DiPtokensfiles/metamask-logo.png" alt="Metamask logo" height="40" width="120">
+        A Metamask wallet connects to the donations frame below. Donations are tax-deductible:
+      </p>
+      <iframe src="https://vittominacori.github.io/ethereum-badge/detail.html?address=0x58E555E7D87B15950Aa32a6c96c73163585FeA2E&embedded=1"
+              style="border:none; overflow:hidden; width:570px; max-width:100%; height:250px; display:block; margin-top:0.75rem;"
+              scrolling="no" frameborder="0" allowtransparency="true"
+              title="Cryptocurrency donation widget"></iframe>
+    </div>
+  </section>
+
+  <!-- ── Membership ─────────────────────────────────────────── -->
+  <section class="section" id="Membership" aria-labelledby="h-membership">
+    <a class="back-link" href="#PageContents">↑ Page Contents</a>
+    <h2 id="h-membership">Membership of FPSA</h2>
+
+    <h3>Ordinary Yearly Membership</h3>
+    <p>Africahead administers FPSA memberships. A yearly recurring membership can be purchased for USD $2. This membership does not include a card.</p>
+
+    <div class="funding-block">
+      <div id="paypal-button-container-P-4PU97528TR6918512MD6TEMI"></div>
+      <script src="https://www.paypal.com/sdk/js?client-id=AdBkTDUoN1WHP9P6llj9YAvxX8RbeOoJfoTFjjGXbPCAM4KDokF3hmgJ7LMM0wI1C5nNjZsy-YpNscRe&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+      <script>
+        paypal.Buttons({
+          style: { shape: 'rect', color: 'gold', layout: 'vertical', label: 'subscribe' },
+          createSubscription: function(data, actions) {
+            return actions.subscription.create({ plan_id: 'P-4PU97528TR6918512MD6TEMI' });
+          },
+          onApprove: function(data, actions) {
+            alert('Thank you! Your subscription ID is: ' + data.subscriptionID);
+          }
+        }).render('#paypal-button-container-P-4PU97528TR6918512MD6TEMI');
+      </script>
+    </div>
+
+    <h3>Executive Membership</h3>
+    <p>Executive membership must also be purchased to help fund FPSA. Executive membership gives the right to make proposals, attend General Meetings, and vote. Executive Members are also members of Houses in FPSA. Executive Membership can be inherited according to the FPSA Constitution. More information is available in the sections on the <a href="#ExecutiveBody">Executive Body (EB)</a>, <a href="#Houses">Houses of FPSA</a>, and in the <a href="indexfiles/ConstitutionFPSA.pdf" target="_blank">FPSA Constitution (PDF)</a>.</p>
+  </section>
+
+  <!-- ── Political Theory ───────────────────────────────────── -->
+  <section class="section" id="PoliticalTheory" aria-labelledby="h-poltheory">
+    <a class="back-link" href="#PageContents">↑ Page Contents</a>
+    <h2 id="h-poltheory">Political Theory</h2>
+
+    <p><em>Most people share a desire for self-determination, but many have been influenced by the idea of imposed "Unity", which relates to "Self" and despotism, and which hinders others' self-determination.</em></p>
+
+    <p>Politics has evolved from Imperialism to Democratic Imperialism (DI), and will continue to evolve toward Democratic Self-Determination (DSD). DI is identified primarily with left, middle, and right majorities and coalitions. In DSD politics, the primary choice is between imperialism (large central governance) and self-determination (small central governance) — not simply between left and right. All political parties can therefore be divided into imperialist and self-determination parties.</p>
+
+    <p>Political orientation can be plotted on a Matrix of Politics. FPSA represents all groups for their self-determination. The ideal would be that each individual attains self-determination — and this requires all people to respect universal laws, otherwise others' self-determination is not respected.</p>
+
+    <p><strong>Matrix of Politics:</strong><br>
+      X-Axis: Liberal (−6) to Conservative (+6)<br>
+      Y-Axis: Unity (−3) to Self-Determination (+3)</p>
+
+    <div class="img-block">
+      <figure>
+        <img src="indexfiles/MatrixOfPolitics.png" alt="Matrix of Politics — before respect of others' self-determination" style="max-width:300px;">
+        <figcaption>Matrix of Politics — Before respect of others' self-determination</figcaption>
+      </figure>
+    </div>
+
+    <div class="img-block">
+      <figure>
+        <img src="indexfiles/MatrixOfPolitics1.png" alt="Matrix of Politics — after respect of others' self-determination" style="max-width:300px;">
+        <figcaption>Matrix of Politics — After respect of others' self-determination</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ── Reasons to vote ────────────────────────────────────── -->
+  <section class="section" id="Reasonstovote" aria-labelledby="h-reasons">
+    <a class="back-link" href="#PageContents">↑ Page Contents</a>
+    <h2 id="h-reasons">Reasons to Vote for FPSA</h2>
+
+    <p>A primary decision for voters is choosing between enforcing multiculturalism across one "United" South Africa, or allowing self-determination for each group. These are two mutually exclusive conditions due to cultural dynamics. A multicultural culture has the right to self-determination in multicultural regions. However, multiculturalists should not have the right to claim all South African territory under their control alone.</p>
+
+    <p>There must be a balance between democratic rule and the self-determination of less powerful groups. Forced "Unity" (with a capital U) is a fallacy, because it creates despotic governments as the sovereign of "United" territories. True democracy respects the self-determination of all groups. FPSA is the only party drawing votes from all South African groups for the self-determination of each group and individual.</p>
+
+    <p><a href="https://en.wikipedia.org/wiki/Cantons_of_Switzerland" target="_blank">Switzerland</a> offers the closest existing example of how FPSA promotes self-determination. Switzerland is currently divided into 26 cantons — some German, some French, one Italian, and some multicultural. Before colonisation, Africa was divided into language groups, much as most of Europe is today. Self-determination can be achieved democratically without war.</p>
+
+    <p>FPSA promotes self-determination for all, provided it does not infringe on others' self-determination. The universal principle of Love — not doing to others what you would not want done to yourself — is the foundation of social contract theory and criminal law.</p>
+
+    <p>FPSA can draw votes from all groups in South Africa, including the multicultural group, because of a constitution that supports all groups with different policies, convictions, and beliefs. FPSA leaders do not all need to agree on everything. The only required shared policy is self-determination for all groups, which implies mutual respect.</p>
+  </section>
+
+  <!-- ── Priorities ─────────────────────────────────────────── -->
+  <section class="section" id="Priorities" aria-labelledby="h-priorities">
+    <a class="back-link" href="#PageContents">↑ Page Contents</a>
+    <h2 id="h-priorities">Priorities</h2>
+
+    <p><strong>Votes:</strong> Anyone wanting to contest upcoming <a href="DiP/Byelections.html" target="_blank">by-elections</a> as a councillor on behalf of FPSA should contact the party. Councillors have considerable freedom to make their own policy — left or right — in their regions.</p>
+
+    <p><strong>Funding:</strong> FPSA is not funded by big business or wealthy individuals. Every donation helps. A funding model is used whereby tax-deductible tokens can be bought and traded on <a href="https://africahead.github.io/Africahead/IppartsExchange.html" target="_blank">Ipparts Exchange (IPPAEX)</a>, a new cryptocurrency exchange currently in development.</p>
+  </section>
+
+  <!-- ── Constitution ───────────────────────────────────────── -->
+  <section class="section" id="Constitution" aria-labelledby="h-constitution">
+    <a class="back-link" href="#PageContents">↑ Page Contents</a>
+    <h2 id="h-constitution">Constitution of FPSA and SA</h2>
+
+    <p>The <a href="indexfiles/ConstitutionFPSA.pdf" target="_blank">FPSA Constitution (PDF)</a> explains its primary objectives. Details were intentionally kept flexible to allow FPSA to attain its objectives while respecting the self-determination of all. These objectives must be achieved through negotiations among different groups seeking self-determination. This webpage contains proposals that can be debated within FPSA, provided the FPSA Constitution and the South African Constitution are respected. The FPSA Constitution may not be changed, except for clarification — thereby protecting the idea of self-determination for all.</p>
+
+    <div class="two-policies">
+      <p><strong>Any party or political movement agreeing to the following two policies can join FPSA:</strong></p>
+      <p>1) Self-determination for all.</p>
+      <p>2) No promotion of war.</p>
+    </div>
+
+    <p>South Africa's Constitution can be adjusted to take new realisations into account, but care must be taken not to disturb important agreements reached during the 1994 transition.</p>
+  </section>
+
+  <!-- ── Executive Body ─────────────────────────────────────── -->
+  <section class="section" id="ExecutiveBody" aria-labelledby="h-eb">
+    <a class="back-link" href="#PageContents">↑ Page Contents</a>
+    <h2 id="h-eb">Executive Body (EB) of FPSA</h2>
+
+    <p>As of 23 June 2021, the EB consisted of 19 <a href="DiP/execmem.html" target="_blank">individuals</a> with seats on the Executive Body — 10 Black, 6 White, 2 Coloured, and 1 Indian. Seats can be purchased, sold, and inherited. Until further notice, an individual can become an EB member if they pass scrutiny and pay more than R1,000 to the party.</p>
+
+    <p>The EB is not a group representing a specific part of society — a single-group body would lapse back into imperialism. EB members divide themselves into different Houses, but on General Meetings they vote as a party, with each seat representing one vote. If no existing House suits an executive member, new Houses can be formed.</p>
+
+    <p>The key difference between FPSA and Parliament: FPSA represents multiple groups but excludes imperialism over "all". Parliament currently includes imperialism over all — for example, all of South Africa is officially multicultural and left-leaning on paper, yet in reality many groups are conservative. FPSA excludes this kind of "all-or-nothing" imperialist approach.</p>
+
+    <p>The EB must arrange self-determination for all who want it, locally, with the knowledge and assurance that others' self-determination is respected nationally and internationally.</p>
+  </section>
+
+  <!-- ── Leadership ─────────────────────────────────────────── -->
+  <section class="section" id="Leadership" aria-labelledby="h-leadership">
+    <a class="back-link" href="#PageContents">↑ Page Contents</a>
+    <h2 id="h-leadership">Leadership of FPSA</h2>
+
+    <p>FPSA accepts the leadership of regions by individuals — including those with traditional authority — provided they respect self-determination for all groups. Real self-determination fundamentally means respecting others' self-determination too. Section 143 of the South African Constitution makes reference to traditional leaders. Separate provincial constitutions will say more about this.</p>
+
+    <p>Leadership must develop by having influential representatives of all the different groups of all the communities of the South African nation come forward to fill and form different Houses, representing different groups in FPSA.</p>
+
+    <p>Leadership has two aspects, rarely found in the same person. Good ideas are a result of honesty — but honest people are not always the most influential. Influential leaders communicate good ideas and do networking. FPSA will therefore have two types of leaders: those who work in the background with good ideas, and well-known leaders who communicate policy to voters. All Houses should ideally have both types.</p>
+
+    <p>The title of President will be rotated and shared among the members of a federal council, because a single president often divides parties and nations with diverse cultures. Presidential power will thus be distributed to allow more decentralised governance.</p>
+  </section>
+
+  <!-- ── Policy ─────────────────────────────────────────────── -->
+  <section class="section" id="Policy" aria-labelledby="h-policy">
+    <a class="back-link" href="#PageContents">↑ Page Contents</a>
+    <h2 id="h-policy">Policy of FPSA</h2>
+
+    <h3>General Policy</h3>
+    <p>FPSA represents different cultures for self-determination. Therefore FPSA cannot require all members to do the same things. FPSA unites in <em>not doing harm</em> — because not doing evil, as recognised in criminal law, is universal. The different Houses of FPSA can each unite in doing positive things for their own culture.</p>
+
+    <p>Self-determination is an internationally recognised democratic right. Achieving self-determination peacefully is more likely when different groups work together in one party to oppose imperialism — the major enemy of self-determination. Acceptable criteria for peaceful division exist: when these criteria are respected, people from different backgrounds can achieve self-determination without war. Switzerland is an example of this, having peacefully created its 26th canton through secession.</p>
+
+    <h3>Land Policy</h3>
+    <p>A <a href="DiP/various/EWCobjection.pdf" target="_blank">letter</a> was submitted to Parliament to object to planned Expropriation Without Compensation (EWC). FPSA's policy is that South Africa should first divide into multicultural and unicultural regions with self-determination before further land reform takes place. If EWC does take place, it should be combined with a resettlement programme that considers the likely distribution of different cultures in future.</p>
+
+    <p>In principle, EWC should not take place — partly because it would break agreements negotiated for the 1994 transition. The only shared policy among FPSA's leaders is that governance of land must be divided. How that division will take place, and where borders will be, are matters for negotiation. Division of land does not mean people will have to move if they do not want to. In Europe, people can live anywhere while governance of land is divided into unicultural and multicultural regions.</p>
+
+    <div class="highlight-box">
+      <p><strong>Moving is not a prerequisite for dividing a country's governance. Division can happen only with regard to governance, without requiring people to move. Most local governments are currently dysfunctional, partly because of the different cultures and languages represented in each council. Much conflict would be reduced if each region were governed by a single language, cultural, or multicultural group.</strong></p>
+    </div>
+
+    <h4 id="LandProposal" style="margin-top:1.5rem; font-size:1.15rem; color:var(--green);">Proposal for Discussion: Solving the Land Problem</h4>
+    <p>Decentralising governance for the self-determination of all groups is a long-term objective. This proposal recognises that all South Africans may vote; universal suffrage was established in 1994 without war. Threatening with war disqualifies anyone from being a leader in FPSA.</p>
+
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div>All land in each region is valued. Land for potential expropriation with compensation is identified. Care must be taken not to disrupt functioning farms that contribute to food security.</div></div>
+      <div class="step"><div class="step-num">2</div><div>The value of the land for expropriation is provided by the South African Reserve Bank (SARB), in Rands, to the decentralised governments.</div></div>
+      <div class="step"><div class="step-num">3</div><div>The decentralised governments offer to buy the land, or do something else with the money, each according to their culture.</div></div>
+      <div class="step"><div class="step-num">4</div><div>The landowners accept or decline the offers. Further developments follow.</div></div>
+    </div>
+
+    <p>The practical proposal for the current reality is: the SARB prints money and gives it to district municipalities, which apply it according to their culture. This is preferable to EWC, which risks destroying the currency as happened in Zimbabwe.</p>
+
+    <h3>Steps to Determine Self-Determination</h3>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div>A first referendum places languages and multilingualism on a ballot. Voters choose between conservatism (single language) and liberalism (multilingual).</div></div>
+      <div class="step"><div class="step-num">2</div><div>Votes are regionalised according to addresses. Multilingual (liberal) and single-language (conservative) areas emerge for each language group.</div></div>
+      <div class="step"><div class="step-num">3</div><div>A second referendum lets the nation choose their cultures in single-language regions.</div></div>
+      <div class="step"><div class="step-num">4</div><div>Negotiations take place among the groups.</div></div>
+      <div class="step"><div class="step-num">5</div><div>Borders for decentralised governance are drawn.</div></div>
+      <div class="step"><div class="step-num">6</div><div>Approximately 40 regions are anticipated. South Africa currently has 44 districts and 8 metropoles. Multicultural groups will likely be situated in metropolitan regions.</div></div>
+    </div>
+
+    <h3 id="LanguageMap">Language Map of South Africa</h3>
+    <p>Language, cultural, and multicultural areas already exist in South Africa. The following language map, produced by Stats SA from 2011 census data, was sourced from <a href="https://commons.wikimedia.org/wiki/File:South_Africa_2011_dominant_language_map.svg" target="_blank">Wikipedia</a>.</p>
+
+    <div class="img-block">
+      <figure>
+        <img src="indexfiles/LanguageMapSA.png" alt="Language map of South Africa (Stats SA, 2011 census)" style="max-width:320px;">
+        <figcaption>Language map of South Africa — Stats SA, 2011 census. Source: Wikipedia.</figcaption>
+      </figure>
+    </div>
+
+    <p>The <a href="https://en.wikipedia.org/wiki/Districts_of_South_Africa" target="_blank">district municipal map of South Africa</a> at Wikipedia is also a useful reference.</p>
+
+    <div class="img-block">
+      <figure>
+        <img src="indexfiles/1280px-South_Africa_national_election_2019_winner_by_VD.svg.png" alt="2019 South African national election results by voting district" style="max-width:320px;">
+        <figcaption>2019 election results by district: Green = ANC, Blue = DA, Yellow = IFP, Orange = FF+, Red = EFF. Source: <a href="https://en.m.wikipedia.org/wiki/2019_South_African_general_election" target="_blank">Wikipedia</a>.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Defence</h3>
+    <p>South Africa should have a single Defence Force, working together with a Federal Police Force. It should use defensive rather than offensive approaches. One of the most important considerations is the extent to which central governance should protect individuals against criminal action by groups in different regions, since different regions may have different legal systems. Federal Police action against criminality can be combined with defence, because criminal action against a community can relate to hostile behaviour by outsiders.</p>
+
+    <h3>Foreign Policy</h3>
+    <p>FPSA proposes that South Africa should have no foreign enemies and no foreign allies, because the South African nation — divided as it is into different communities and groups — cannot afford to be further divided by foreign interests. This could imply withdrawing from BRICS and the Commonwealth, but such decisions cannot be made properly without full involvement and reflection.</p>
+    <p>South Africa is large enough to be independent from foreigners, given good governance and cooperation among regions in one national market, as prescribed by the South African Constitution.</p>
+    <p>South Africa should be part of a well-functioning international group of countries applying universal laws about not doing evil to others — the foundation of criminal law and social contract theory.</p>
+
+    <h3>Domestic Policy</h3>
+    <p>The most important function of government is enforcing universal laws — those that every group can agree to — because universal laws unite a nation. When respect for universal laws falters, a nation becomes divided in destructive ways. One of the most important tasks will be forming a force whose sole purpose is protecting each individual against ostracism and exclusion in at least one region. Domestic policy is simply to give each region, group, and community the greatest possible self-determination within the national and international context, against imperialist control.</p>
+
+    <h3>Economic Policy</h3>
+    <p>The "left wing" (liberal side) and "right wing" (conservative side) of an economy must both function. During apartheid, only the right wing functioned. Currently, only the left wing functions.</p>
+    <p>FPSA promotes <strong>economic independence</strong> for each region wherever possible. The main difference between FPSA's national economic policy and those of current parties is that current major parties are controlled by international monetary forces. The result is that capital is not being created in South Africa — it is primarily borrowed from abroad or invested by foreigners. Current political parties are effectively selling South Africa to foreign interests.</p>
+    <p>Capital forms from two human sources: ideas and labour. Intequity (Capital of Ideas) is a new concept that gave rise to Intequinism, the philosophical foundation of FPSA. All groups and individuals are encouraged to form <strong>new currencies</strong> that balance the Labour Theory of Value with the value of ideas. Refer to <a href="https://africahead.github.io/Africahead/IppartsExchange.html" target="_blank">Ipparts Exchange (IPPAEX)</a> for more information.</p>
+    <p><strong>Taxation</strong> will, as far as possible, be abolished and replaced by money creation, while central government is being minimised.</p>
+  </section>
+
+  <!-- ── Houses ─────────────────────────────────────────────── -->
+  <section class="section" id="Houses" aria-labelledby="h-houses">
+    <a class="back-link" href="#PageContents">↑ Page Contents</a>
+    <h2 id="h-houses">Houses of FPSA</h2>
+
+    <p>Leaders must come forward and form Liberal, Conservative, and other Houses, as needed to govern South Africa well.</p>
+    <p>It seems likely that Houses will form representing regions, similar to the role of municipalities. When FPSA chooses Members of Parliament, they will probably represent Houses, which in turn represent regions and municipalities.</p>
+  </section>
+
+  <!-- ── Elections ─────────────────────────────────────────── -->
+  <section class="section" id="Elections" aria-labelledby="h-elections">
+    <a class="back-link" href="#PageContents">↑ Page Contents</a>
+    <h2 id="h-elections">Elections</h2>
+
+    <h3>2021 Local Election Candidates</h3>
+    <div class="candidates">
+      <div class="candidate-card">
+        <img src="indexfiles/madams.jpg" alt="Photo of Mr Hamid Adams">
+        <p>Mr. Hamid Adams<br>BA (Philosophy)<br>eThekwini</p>
+      </div>
+      <div class="candidate-card">
+        <img src="indexfiles/mpienaar.jpg" alt="Photo of Mr Marquard Pienaar">
+        <p>Mr. Marquard Pienaar<br>BRek (Hons), MPhil (Philosophy)<br>Tshwane</p>
+      </div>
+    </div>
+
+    <p>FPSA did not win seats in the 2021 local elections. In Tshwane, approximately 1,350 additional votes across all ballot papers would have been needed to secure a seat on the council.</p>
+
+    <div class="info-box">
+      <h3 style="margin-top:0;">Slogan for 2021 Local Elections and By-Elections</h3>
+      <p><strong>★ Divide Municipal Funds! ★</strong></p>
+      <p>Much money has been stolen from municipalities because of centralised control of funds. If each municipality's funds were divided into separate bank accounts, it would not be possible to steal from a single central account. Each ward could have its own bank account requiring the signatures of ward councillors plus one additional signatory before any payments are made.</p>
+    </div>
+
+    <p><a href="indexfiles/FPSAmanifesto1October2021.pdf" target="_blank">Download the 2021 election manifesto (PDF)</a>.</p>
+    <p>FPSA needs candidates in all municipalities for the future. Refer to the <a href="DiP/Jobs.html" target="_blank">Jobs page</a>.</p>
+  </section>
+
+  <!-- ── Future ─────────────────────────────────────────────── -->
+  <section class="section" id="Future" aria-labelledby="h-future">
+    <a class="back-link" href="#PageContents">↑ Page Contents</a>
+    <h2 id="h-future">The Future</h2>
+
+    <p>Intequinism, the philosophical foundation of FPSA, does not prioritise achieving goals through despotism, as imperialism does. An objective is still relevant, however, and will adjust to circumstances. Nationally, the objective is self-determination for all unicultural and multicultural groups in different regions, for those who want it.</p>
+
+    <p>If this policy were universalised, self-determination regions would become smaller, but central governance areas could become larger. For example, because many Zimbabweans already live and work in South Africa, the two countries could eventually form one national territory with many self-determination regions — and in that new nation, the central government would be much smaller than any current government in either country.</p>
+
+    <p>Promoting self-determination for all groups who want it is a new political movement, because historically self-determination was promoted only for "Self", often through violence. It is foreseen that Democratic Imperialism (DI) will transition to Democratic Self-Determination (DSD), just as kingdoms transitioned to DI.</p>
+
+    <p>A webpage has been created for <a href="SDI/index.html" target="_blank">Self-Determination International (SDI)</a>, where different new DSD groups and parties forming internationally can cooperate to achieve the goal of DSD for all. Real self-determination can only be achieved if it is promoted for all groups worldwide — otherwise it is merely imperialism.</p>
+  </section>
+
+  <!-- ── Projects ───────────────────────────────────────────── -->
+  <section class="section" id="Projects" aria-labelledby="h-projects">
+    <a class="back-link" href="#PageContents">↑ Page Contents</a>
+    <h2 id="h-projects">Projects</h2>
+    <p><a href="Projects/Petition.html" target="_blank">→ Petition</a></p>
+  </section>
+
+  <!-- ── Notices & Community ────────────────────────────────── -->
+  <section class="section" id="NotComm" aria-labelledby="h-notices">
+    <a class="back-link" href="#PageContents">↑ Page Contents</a>
+    <h2 id="h-notices"><a href="DiP/Notices.html" target="_blank">Notices</a></h2>
+    <h2><a href="DiP/Community.html" target="_blank">Community</a></h2>
+  </section>
+
+  <!-- ── Social Media ───────────────────────────────────────── -->
+  <section class="section" id="SocialMedia" aria-labelledby="h-social">
+    <a class="back-link" href="#PageContents">↑ Page Contents</a>
+    <h2 id="h-social">Social Media</h2>
+
+    <p>FPSA can be discussed and followed on the following platforms:</p>
+
+    <div class="social-links">
+      <a href="https://www.facebook.com/federalpartysa" target="_blank">Facebook</a>
+      <a href="https://twitter.com/federal_sa" target="_blank">Twitter / X</a>
+      <a href="https://chat.whatsapp.com/HMCsIDcazMiGoBIMXQujuh" target="_blank">WhatsApp</a>
+      <a href="https://dividedparty.disqus.com" target="_blank">Disqus</a>
+      <a href="https://t.me/federalpartysa" target="_blank">Telegram</a>
+    </div>
+
+    <p>Disqus is used primarily for conciliation, mediation, and dispute resolution, in line with the Divided Party (DiP) brand tokens listed on IPPAEX.</p>
+
+    <!-- AddToAny sharing widget -->
+    <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="margin-top:1rem;">
+      <a class="a2a_dd" href="https://www.addtoany.com/share">Share this page</a>
+    </div>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+  </section>
+
+</div><!-- /container -->
+</main>
+
+<!-- ── Footer ────────────────────────────────────────────────── -->
+<footer>
+  <nav aria-label="Footer navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="DiP/Contact.html" target="_blank">Contact</a></li>
+      <li><a href="DiP/Fundraising.html" target="_blank">Funding</a></li>
+      <li><a href="DiP/Media.html" target="_blank">Media</a></li>
+      <li><a href="DiP/Municipalities.html" target="_blank">Municipalities</a></li>
+      <li><a href="DiP/Jobs.html" target="_blank">Jobs</a></li>
+    </ul>
+  </nav>
+</footer>
+
+<!-- ── Disqus comments ───────────────────────────────────────── -->
+<div style="max-width:var(--max); margin:2rem auto; padding:0 1.25rem;">
+  <div id="disqus_thread"></div>
+  <script>
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://dividedparty.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</body>
+</html>
